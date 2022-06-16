@@ -1,0 +1,28 @@
+
+
+h1{
+    background-color:rgb(43, 172, 231);
+    height:50px;
+    padding:30px;
+    margin:0;
+    font-style: oblique;
+}
+
+html{
+    padding:30px;
+}
+
+h2 {
+    background-color:aqua;
+    height:10px;
+    width:20em;
+    padding:10px;
+}
+
+h3 {
+    padding-left:20px;
+    padding-top:30px;
+    
+}
+
+
