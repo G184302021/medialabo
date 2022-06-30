@@ -8,9 +8,7 @@ let kaisu = 0;
 // 予想を4回実行する
 // 将来: ボタンを押したら， hantei() を呼び出すように修正する
 hantei();
-hantei();
-hantei();
-hantei();
+
 
 // ボタンを押した後の処理をする関数 hantei() の定義
 function hantei() {
@@ -19,27 +17,34 @@ function hantei() {
     //        ページに表示する方法はまだ習っていないので
     //        判定結果はコンソールに出力すること
 
-
-    for (let n of kaisu){
-        if (kaisu=>4){
+    kaisu=kaisu+1;
+    console.log(kaisu+'回目の予想:'+yoso);
+        if (kaisu>4){
             console.log('答えは '+kotae+' でした．すでにゲームは終わっています');
         }else{
-            if (3===kaisu && !(kotae === yoso)){
-                console.log(kaisu+'回目の予想:'+yoso);
+            if (4===kaisu && !(kotae === yoso)){ 
                 console.log('まちがい．残念でした答えは '+kotae+' です．');
-            }
-            else {
+            }else if (kaisu<4 && kotae === yoso){
+                console.log('正解です.おめでとう!');
+            }else if(kaisu<4 &&!(kotae === yoso)) {
                 if (kotae>yoso){
-                    console.log(kaisu+'回目の予想:'+yoso);
                     console.log('まちがい．答えはもっと大きいですよ');
-                }else{
-                    console.log(kaisu+'回目の予想:'+yoso);
+                }else if (kotae<yoso){
                     console.log('まちがい．答えはもっと小さいですよ');
                 }
             }
         }
-    
-        kaisu=kaisu+1;
-    }
 
 }
+
+
+
+let p = document.querySelector('p#result');  
+//  let li; 
+//  li = document.createElement('li');
+//  li.textContent = '〇';  
+//  ht.insertAdjacentElement('beforeend', li);
+//  li = document.createElement('li');
+//  li.textContent = '△';  
+//  ht.insertAdjacentElement('beforeend', li);
+
