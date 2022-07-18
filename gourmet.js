@@ -200,10 +200,49 @@ let data = {
 };
 
 /////////// 課題3-2 ここからプログラムを書こう
-let d = document.querySelector('span#shop');
-for (let a of data.results.shop){
-  let p = document.createElement('p');
-  p.textContent = a.name ;
-  d.insertAdjacentElement('beforeend', p);
+// let d = document.querySelector('span#shop');
+// for (let a of data.results.shop){
+//   let p = document.createElement('p');
+//   p.textContent = a.name ;
+//   d.insertAdjacentElement('beforeend', p);
+// }
+
+let b = document.querySelector('#print');
+b.addEventListener('click', gourmet);
+
+function gourmet(){
+  let i = document.querySelector('input[name="chose"]');
+  let li = document.querySelector('span#shop');
+  let li2 = document.querySelector('span#kekka');
+  li.textContent = (i.value);
+  for (let a of data.results.shop){
+    if (li===data.results.shop.genre.name){
+      li2.textContent = a.name ;
+    }else{
+      li2.textContent = 'ありません。';
+    }
+  }
+
+
+
+  // for (let r of i) {
+  //   if (r.checked) {        
+  //     li.textContent =(r.value);
+  //     for (let a of data.results.shop){
+  //       if (li===data.results.shop.genre.name){
+  //         li2.textContent = a.name ;
+  //       }else{
+  //         li2.textContent = 'ありません。';
+  //       }
+  //     }
+      
+
+  //   }
+  // }
 }
+
+    // let p = document.querySelector('span#shop'); 
+    // p.textContent = C;
+
+
 
