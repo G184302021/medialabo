@@ -200,7 +200,10 @@ let data = {
 };
 
 /////////// 課題3-2 ここからプログラムを書こう
+let d = document.querySelector('span#shop');
 for (let a of data.results.shop){
-  console.log(a.name);
+  let p = document.createElement('p');
+  p.textContent = a.name ;
+  d.insertAdjacentElement('beforeend', p);
 }
 
