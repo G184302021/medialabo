@@ -2,10 +2,13 @@
 <html>
     <head>
         <title>グルメ情報</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
         <script src="gourmet.js" defer></script>
     </head>
 
     <body>
+        <h1>グルメ情報</h1>
+        
         <input type="test" name="chose" id="chose" size="10">
         <!-- <input type="radio" name="chose" id="kind1" value="2">
         <label for="kind1">居酒屋</label>
@@ -14,9 +17,37 @@
         <input type="radio" name="chose" id="kind3" value="2">
         <label for="kind3">創作料理</label> -->
 
-        <button id="print">検索</button>
+        <button id="print" onclick="gourmet()">検索</button>
+        <ul>
+            <li>G001 ... 居酒屋</li>
+            <li>G002 ... ダイニングバー・バル</li>
+            <li>G003 ... 創作料理</li>
+            <li>G004 ... 和食</li>
+            <li>G005 ... 洋食</li>
+            <li>G006 ... イタリアン・フレンチ</li>
+            <li>G007 ... 中華</li>
+            <li>G008 ... 焼肉・ホルモン</li>
+            <li>G009 ... アジア・エスニック料理</li>
+            <li>G010 ... 各国料理</li>
+            <li>G011 ... カラオケ・パーティ</li>
+            <li>G012 ... バー・カクテル</li>
+            <li>G013 ... ラーメン</li>
+            <li>G014 ... カフェ・スイーツ</li>
+            <li>G015 ... その他グルメ</li>
+            <li>G016 ... お好み焼き・もんじゃ</li>
+            <li>G017 ... 韓国料理</li>
+        </ul>
         <p>検索結果：<span id="shop"></span></p>
         <p><span id="kekka"></span></p>
+        <p><span id="access"></span></p>
+        <p><span id="address"></span></p>
+        <!-- <p><span id="budget"></span></p>
+        <p><span id="catch"></span></p>
+        <p><span id="genre"></span></p>
+        <p><span id="name"></span></p>
+        <p><span id="open"></span></p>
+        <p><span id="station"></span></p>
+        <p><span id="sub"></span></p> -->
 
         
         <!-- <p><span id="shop"></span></p>
