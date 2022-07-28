@@ -4,21 +4,17 @@
         <title>グルメ情報</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
         <script src="gourmet.js" defer></script>
+        <link rel="stylesheet" href="project.css">
     </head>
 
     <body>
         <h1>グルメ情報</h1>
         
         <input type="test" name="chose" id="chose" size="10">
-        <!-- <input type="radio" name="chose" id="kind1" value="2">
-        <label for="kind1">居酒屋</label>
-        <input type="radio" name="chose" id="kind2" value="3">
-        <label for="kind2">ダイニングバー・バル</label>
-        <input type="radio" name="chose" id="kind3" value="2">
-        <label for="kind3">創作料理</label> -->
+        
 
         <button id="print" onclick="gourmet()">検索</button>
-        <ul>
+        <ul id="code">
             <li>G001 ... 居酒屋</li>
             <li>G002 ... ダイニングバー・バル</li>
             <li>G003 ... 創作料理</li>
@@ -37,11 +33,21 @@
             <li>G016 ... お好み焼き・もんじゃ</li>
             <li>G017 ... 韓国料理</li>
         </ul>
-        <p>検索結果：<span id="shop"></span></p>
+        <p>検索結果：<span id="genre"></span></p>
+        <p><span id="nai"></span></p>
+        
+        <div id="shop">
+
+        </div>
+        <!-- <div id="shop"></div> -->
+        
+
+
+        <!-- 
         <p><span id="kekka"></span></p>
         <p><span id="access"></span></p>
         <p><span id="address"></span></p>
-        <!-- <p><span id="budget"></span></p>
+        <p><span id="budget"></span></p>
         <p><span id="catch"></span></p>
         <p><span id="genre"></span></p>
         <p><span id="name"></span></p>
